@@ -1,12 +1,14 @@
 /* See LICENSE file for copyright and license details. */
 
+#include "fibonacci.c"
+
 /* appearance */
-static const unsigned int borderpx  = 4;        /* border pixel of windows */
-static const unsigned int gappx     = 8;
+static const unsigned int borderpx  = 6;        /* border pixel of windows */
+static const unsigned int gappx     = 6;
 static const unsigned int snap      = 1;       /* snap pixel */
 static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrainsMono Nerd Font Mono:size=11" };
+static const char *fonts[]          = { "JetBrainsMono Nerd Font Mono:size=14" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font Mono:size=11";
 static const char col_gray1[]       = "#2e303e";
 static const char col_gray2[]       = "#2e303e";
@@ -20,7 +22,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5" };
+static const char *tags[] = { "", "", "", "" };
 
 static const Rule rules[] = {
     { "Gimp", NULL, NULL, 0, 1, -1 },
@@ -33,7 +35,8 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "T",      tile },    /* first entry is default */
+	{ "T",      dwindle },    /* first entry is default */
+	{ "C",      centeredmaster },    /* first entry is default */
 };
 
 /* key definitions */
@@ -66,9 +69,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_v,      killclient,     {0} },
-	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       XK_f,      togglefullscr,      {0} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
