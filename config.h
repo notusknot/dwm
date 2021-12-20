@@ -3,8 +3,8 @@
 #include "fibonacci.c"
 
 /* appearance */
-static const unsigned int borderpx  = 4;        /* border pixel of windows */
-static const unsigned int gappx     = 0;
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int gappx     = 8;
 static const unsigned int snap      = 1;       /* snap pixel */
 static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
