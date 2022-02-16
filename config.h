@@ -12,9 +12,9 @@ static const char *fonts[]          = { "JetBrainsMono Nerd Font Mono:size=13" }
 static const char dmenufont[]       = "JetBrainsMono Nerd Font Mono:size=11";
 static const char col_gray1[]       = "#2e303e";
 static const char col_gray2[]       = "#2e303e";
-static const char col_gray3[]       = "#393b4d";
+static const char col_gray3[]       = "#9699b7";
 static const char col_gray4[]       = "#e3e6ee";
-static const char col_cyan[]        = "#9699b7";
+static const char col_cyan[]        = "#393b4d";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
