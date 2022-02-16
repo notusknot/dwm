@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-Xephyr -br -ac -noreset -screen 1366x768:1 &
+Xephyr -br -ac -noreset -screen 1366x768:0 &
 sleep 1
-DISPLAY=:1 ./dwm &
+DISPLAY=:0 ./dwm &
