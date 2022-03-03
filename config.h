@@ -34,6 +34,7 @@ static const char *tags[] = { "1", "2", "3", "4" };
 
 static const Rule rules[] = {
     { "Gimp", NULL, NULL, 0, 1, -1 },
+    { "st-notes", NULL, NULL, 0, 1, -1 },
 };
 
 /* layout(s) */
@@ -62,12 +63,14 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *barcmd[]  = { "eww open --toggle bar", NULL };
+static const char *notescmd[]  = { "st -e nvim $(date '+%Y-%m-%d').md -n notes", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      spawn,          SHCMD("eww open --toggle bar") },
+	{ MODKEY,                       XK_n,      spawn,          SHCMD("st -e nvim $(date '+%Y-%m-%d').md -n st-notes") },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
