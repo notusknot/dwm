@@ -70,7 +70,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      spawn,          SHCMD("eww open --toggle bar") },
-	{ MODKEY,                       XK_n,      spawn,          SHCMD("st -e nvim ~/stuff/notes/$(date '+%Y-%m-%d').md -n st-notes") },
+	{ MODKEY,                       XK_n,      spawn,          SHCMD("st -c st-notes -e nvim ~/stuff/notes/$(date '+%Y-%m-%d').md") },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
