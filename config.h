@@ -10,11 +10,11 @@ static const int showbar            = 0;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font Mono:size=13" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font Mono:size=11";
-static const char col_gray1[]       = "#2e303e";
-static const char col_gray2[]       = "#2e303e";
+static const char col_gray1[]       = "#292a37";
+static const char col_gray2[]       = "#292a37";
 static const char col_gray3[]       = "#9699b7";
-static const char col_gray4[]       = "#e3e6ee";
-static const char col_cyan[]        = "#44465c";
+static const char col_gray4[]       = "#d9e0ee";
+static const char col_cyan[]        = "#393a4d";
 static const unsigned int baralpha = 0xd0;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]      = {
